@@ -82,6 +82,11 @@ class Orbit extends Component {
     window.addEventListener('resize', this.onWindowResize, false)
   }
 
+  componentWillUnmount(){
+    this.stop()
+    this.mount.removeChild(this.renderer.domElement)
+  }
+
   start = () => {
     if (!this.frameId) {
       this.frameId = requestAnimationFrame(this.animate)
