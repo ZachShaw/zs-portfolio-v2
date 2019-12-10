@@ -1,0 +1,76 @@
+{
+  "plugins": [
+    "react-hooks"
+  ],
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "camelcase": "off",
+    "no-plusplus": "off",
+    "no-use-before-define": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [
+          "Link"
+        ],
+        "specialLink": [
+          "to"
+        ]
+      }
+    ],
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ],
+    "react/forbid-prop-types": "off",
+    "react/jsx-filename-extension": "off",
+    "react/require-default-props": "off",
+    "react/no-array-index-key": "off",
+    "react/sort-comp": [
+      1,
+      {
+        "groups": {
+          "rendering": [
+            "render",
+            "/^render.+$/"
+          ]
+        },
+        "order": [
+          "static-methods",
+          "lifecycle",
+          "everything-else",
+          "rendering"
+        ]
+      }
+    ],
+    "react/prop-types": "warn",
+    "quotes": [
+      "warn",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.spec.js",
+          "**/*.stories.js"
+        ]
+      }
+    ]
+  },
+  "parser": "babel-eslint"
+}
