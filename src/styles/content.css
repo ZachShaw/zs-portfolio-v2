@@ -1,0 +1,6 @@
+#contentcontainer {
+  z-index: 999;
+  margin-top: 66vh;
+  padding: 6vw;
+  overflow: hidden;
+}

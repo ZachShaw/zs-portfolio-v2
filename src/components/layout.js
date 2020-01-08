@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './layout.css'
+import '../styles/layout.css'
 
 const Layout = ({ children }) => (
   <>

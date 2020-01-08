@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import * as THREE from 'three'
 
+import '../styles/orbit.css'
+
 const geom = new THREE.IcosahedronGeometry(2, 1)
 const geom2 = new THREE.IcosahedronGeometry(5, 1)
 const geometry = new THREE.TetrahedronGeometry(2, 0)
@@ -120,7 +122,7 @@ class Orbit extends Component {
 
   render(){
     return(
-      <div style={{ width: '1000px', height: '1000px' }} ref={(mount) => { this.mount = mount }} />
+      <div className="orbit-wrapper" ref={(mount) => { this.mount = mount }} />
     )
   }
 }
