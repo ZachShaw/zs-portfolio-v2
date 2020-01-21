@@ -9,7 +9,7 @@ const geometry = new THREE.TetrahedronGeometry(2, 0)
 
 const mat = new THREE.MeshPhongMaterial({
   color: 0xffffff,
-  shading: THREE.FlatShading
+  flatShading: THREE.FlatShading
 })
 
 const planet = new THREE.Mesh(geom, mat)
@@ -39,10 +39,10 @@ class Orbit extends Component {
     this.scene.add(circle)
     this.scene.add(particle)
 
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 100; i++) {
       const mesh = new THREE.Mesh(geometry, mat)
       mesh.position.set(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize()
-      mesh.position.multiplyScalar(90 + (Math.random() * 50))
+      mesh.position.multiplyScalar(90 + (Math.random() * 400))
       mesh.rotation.set(Math.random() * 2, Math.random() * 2, Math.random() * 2)
       particle.add(mesh)
     }
